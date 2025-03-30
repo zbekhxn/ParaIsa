@@ -1,10 +1,8 @@
 #envelope {
-  margin: 20px auto;
+  margin: 100px auto;
   position: relative;
-  width: 90%;
-  max-width: 350px;
-  height: auto;
-  padding-top: 60%; /* Mantiene la proporción */
+  width: 350px;
+  height: 220px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   background-color: #f9c5c8;
@@ -16,8 +14,8 @@
   font-weight: bold;
   font-style: normal;
   color: #ff3333; /* Rojo más intenso */
-  font-size: 36px; /* Título más grande */
-  margin-bottom: 10px; /* Espaciado adicional */
+  font-size: 100px; /* Título mucho más grande */
+  margin-bottom: 15px; /* Espaciado adicional */
 }
 
 .message {
@@ -29,7 +27,7 @@
   font-weight: bold; /* Refuerza la visibilidad */
   font-style: normal;
   color: #d00000; /* Rojo oscuro para mayor contraste */
-  font-size: 24px; /* Texto más grande */
+  font-size: 34px; /* Texto un poco más grande */
   display: none; /* Oculto por defecto */
   white-space: nowrap; /* Evita que el texto se rompa en una nueva línea */
 }
@@ -59,6 +57,34 @@
   }
 }
 
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+  #envelope {
+    width: 250px;
+    height: 160px;
+    margin: 15px auto; /* Ajusta el margen superior e inferior para móviles */
+    box-shadow: none; /* Opcional para simplificar en pantallas pequeñas */
+  }
+
+  .title {
+    font-size: 40px; /* Reduce el tamaño del título para móviles */
+    margin-bottom: 15px; /* Ajusta el espaciado para móviles */
+  }
+
+  .message {
+    font-size: 30px; /* Reduce el tamaño del texto para móviles */
+  }
+
+  .reset {
+    margin-top: 15px;
+  }
+
+  .reset button {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
 body {
   background-color: #f7d9da;
 }
@@ -69,7 +95,6 @@ body {
 
 .reset {
   text-align: center;
-  margin-top: 20px;
 }
 
 .reset button {
@@ -82,13 +107,13 @@ body {
   border-radius: 4px;
   color: #ff5757;
   display: inline-block;
-  font-size: 20px;
+  font-size: 30px;
   text-transform: uppercase;
   margin: 5px;
-  padding: 10px;
+  padding: 12px;
   line-height: 1em;
   text-decoration: none;
-  min-width: 120px;
+  min-width: 140px;
   cursor: pointer;
 }
 
@@ -105,19 +130,19 @@ body {
 }
 
 .flap {
-  border-left: 85px solid transparent;
-  border-right: 85px solid transparent;
-  border-bottom: 50px solid transparent;
-  border-top: 60px solid #ff3333;
+  border-left: 170px solid transparent;
+  border-right: 170px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-top: 120px solid #ff3333;
   transform-origin: top;
   pointer-events: none;
 }
 
 .pocket {
-  border-left: 85px solid #ff9999;
-  border-right: 85px solid #ff9999;
-  border-bottom: 55px solid #fd8787;
-  border-top: 55px solid transparent;
+  border-left: 170px solid #ff9999;
+  border-right: 170px solid #ff9999;
+  border-bottom: 110px solid #fd8787;
+  border-top: 110px solid transparent;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
 }
@@ -125,11 +150,11 @@ body {
 .letter {
   position: relative;
   background-color: #f9c5c8;
-  width: 90%;
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
-  height: 90%;
-  top: 5%;
+  height: 95%;
+  top: 2.5%;
   border-radius: 8px;
   box-shadow: 0 3px 30px rgba(0, 0, 0, 0.12);
 }
@@ -189,14 +214,14 @@ body {
 }
 
 .open .letter {
-  transform: translateY(-35px);
+  transform: translateY(-70px);
   transition: transform 0.4s 0.6s ease, z-index 0.6s;
   z-index: 2;
 }
 
 .hearts {
   position: absolute;
-  top: 55px;
+  top: 110px;
   left: 0;
   right: 0;
   z-index: 2;
@@ -213,10 +238,10 @@ body {
 .heart:after {
   position: absolute;
   content: "";
-  left: 30px;
+  left: 60px;
   top: 0;
-  width: 30px;
-  height: 45px;
+  width: 60px;
+  height: 90px;
   background: #D00000;
   border-radius: 50px 50px 0 0;
   transform: rotate(-45deg);
@@ -277,7 +302,7 @@ body {
     top: 0;
   }
   100% {
-    top: -350px;
+    top: -700px;
   }
 }
 @keyframes slideUp {
@@ -285,7 +310,7 @@ body {
     top: 0;
   }
   100% {
-    top: -350px;
+    top: -700px;
   }
 }
 @-webkit-keyframes sideSway {
@@ -293,7 +318,7 @@ body {
     margin-left: 0px;
   }
   100% {
-    margin-left: 30px;
+    margin-left: 60px;
   }
 }
 @keyframes sideSway {
@@ -301,6 +326,6 @@ body {
     margin-left: 0px;
   }
   100% {
-    margin-left: 30px;
+    margin-left: 60px;
   }
 }
